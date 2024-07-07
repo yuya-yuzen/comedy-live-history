@@ -1,19 +1,17 @@
+import Timeline from "@mui/lab/Timeline";
+
 import mockData from "../mockData";
+import History from "./History";
 
 function Histories() {
   const histories = mockData.values;
 
   return (
-    <ul>
+    <Timeline>
       {histories.map((history, index) => (
-        <li key={index}>
-          <p>日付：{history[0]}</p>
-          <p>名前：{history[1]}</p>
-          <p>場所：{history[2]}</p>
-          <p>出演：{history[3]}</p>
-        </li>
+        <History key={index} history={history} />
       ))}
-    </ul>
+    </Timeline>
   );
 }
 

@@ -8,6 +8,8 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 
+import Comedians from "./Comedians";
+
 function History({ history }) {
   return (
     <TimelineItem>
@@ -21,7 +23,7 @@ function History({ history }) {
           <b>{history[1]}</b>
         </Typography>
         <Typography>@{history[2]}</Typography>
-        {history[3] && <Typography>{history[3]}</Typography>}
+        {history[3] && <Comedians comedians={history[3]} />}
         <br />
       </TimelineContent>
     </TimelineItem>

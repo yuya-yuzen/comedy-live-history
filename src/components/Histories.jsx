@@ -8,6 +8,7 @@ function Histories() {
 
   return (
     <>
+      <p>合計 {histories.length} 本</p>
       <p>※新しい順に記載</p>
       <Timeline>
         {[...histories].reverse().map((history, index) => (

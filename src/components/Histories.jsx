@@ -7,11 +7,14 @@ function Histories() {
   const histories = mockData.values;
 
   return (
-    <Timeline>
-      {histories.map((history, index) => (
-        <History key={index} history={history} />
-      ))}
-    </Timeline>
+    <>
+      <p>※新しい順に記載</p>
+      <Timeline>
+        {[...histories].reverse().map((history, index) => (
+          <History key={index} history={history} />
+        ))}
+      </Timeline>
+    </>
   );
 }
 

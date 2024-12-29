@@ -4,4 +4,12 @@
     <%= comedian.name %>
   </p>
 
+  <p>
+    <strong>Live:</strong>
+    <ul>
+      <% comedian.live.each do |life| %>
+        <%= render partial: "comedians/life", object: life %>
+      <% end %>
+    </ul>
+  </p>
 </div>

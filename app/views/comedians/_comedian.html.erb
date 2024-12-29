@@ -7,7 +7,7 @@
   <p>
     <strong>Live:</strong>
     <ul>
-      <% comedian.live.each do |life| %>
+      <% comedian.live.order(date: :asc).each do |life| %>
         <%= render partial: "comedians/life", object: life %>
       <% end %>
     </ul>

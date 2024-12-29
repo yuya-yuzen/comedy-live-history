@@ -3,7 +3,7 @@ class LivesController < ApplicationController
 
   # GET /lives or /lives.json
   def index
-    @lives = Live.all
+    @lives = Live.all.order(date: :asc)
   end
 
   # GET /lives/1 or /lives/1.json

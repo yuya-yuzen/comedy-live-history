@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :comedians
   resources :lives
+  resources :performers
 end

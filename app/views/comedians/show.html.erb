@@ -2,6 +2,12 @@
 
 <%= render @comedian %>
 
+<ul>
+  <% @comedian.live.recent.each do |life| %>
+    <%= render partial: "comedians/life", object: life %>
+  <% end %>
+</ul>
+
 <div>
   <%= link_to "お笑い芸人を編集する", edit_comedian_path(@comedian) %> |
   <%= link_to "お笑い芸人一覧へ戻る", comedians_path %>

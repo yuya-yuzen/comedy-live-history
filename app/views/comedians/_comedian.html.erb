@@ -1,14 +1,7 @@
 <div id="<%= dom_id comedian %>">
   <p>
     <strong>
-      <%= link_to comedian.name, comedian %>
+      <%= comedian.display_name %>
     </strong>
-    (<%= comedian.performers.count %>)
   </p>
-
-  <ul>
-    <% comedian.live.order(date: :asc).each do |life| %>
-      <%= render partial: "comedians/life", object: life %>
-    <% end %>
-  </ul>
 </div>

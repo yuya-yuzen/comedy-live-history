@@ -1,11 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>お笑い芸人一覧</h1>
+<h1>お笑い芸人一覧（<%= Comedian.count %>）</h1>
 
 <div id="comedians">
-  <% @comedians.each do |comedian| %>
-    <%= render comedian %>
-  <% end %>
+  <ul>
+    <% @comedians.each do |comedian| %>
+      <li>
+        <strong>
+          <%= link_to comedian.display_name, comedian %>
+        </strong>
+      </li>
+    <% end %>
+  </ul>
 </div>
 
 <%= link_to "お笑い芸人を新規作成する", new_comedian_path %>

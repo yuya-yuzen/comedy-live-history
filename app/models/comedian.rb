@@ -3,4 +3,8 @@ class Comedian < ApplicationRecord
   has_many :live, through: :performers
 
   scope :most_seen, -> { joins(:performers).group(:id).order('COUNT(performers.id) DESC') }
+
+  def display_name
+    "#{name} （#{performers.count}）"
+  end
 end

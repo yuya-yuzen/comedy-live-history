@@ -3,7 +3,7 @@ class ComediansController < ApplicationController
 
   # GET /comedians or /comedians.json
   def index
-    @comedians = Comedian.all
+    @comedians = Comedian.most_seen
   end
 
   # GET /comedians/1 or /comedians/1.json

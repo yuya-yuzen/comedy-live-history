@@ -3,8 +3,8 @@
 <%= render @comedian %>
 
 <div>
-  <%= link_to "Edit this comedian", edit_comedian_path(@comedian) %> |
-  <%= link_to "Back to comedians", comedians_path %>
+  <%= link_to "お笑い芸人を編集する", edit_comedian_path(@comedian) %> |
+  <%= link_to "お笑い芸人一覧へ戻る", comedians_path %>
 
-  <%= button_to "Destroy this comedian", @comedian, method: :delete %>
+  <%= button_to "お笑い芸人を削除する", @comedian, method: :delete %>
 </div>

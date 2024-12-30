@@ -3,8 +3,8 @@
 <%= render @life %>
 
 <div>
-  <%= link_to "Edit this live", edit_life_path(@life) %> |
-  <%= link_to "Back to lives", lives_path %>
+  <%= link_to "お笑いライブを編集する", edit_life_path(@life) %> |
+  <%= link_to "お笑いライブ一覧へ戻る", lives_path %>
 
-  <%= button_to "Destroy this live", @life, method: :delete %>
+  <%= button_to "お笑いライブを削除する", @life, method: :delete %>
 </div>

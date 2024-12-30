@@ -1,11 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>お笑いライブ一覧</h1>
+<h1>お笑いライブ一覧（<%= @lives.count %>）</h1>
 
 <div id="lives">
-  <% @lives.each do |life| %>
-    <%= render life %>
-  <% end %>
+  <ul>
+    <% @lives.each do |life| %>
+      <li>
+        <strong>
+          <%= link_to life.display_name, life %>
+        </strong>
+      </li>
+    <% end %>
+  </ul>
 </div>
 
 <%= link_to "お笑いライブを新規作成する", new_life_path %>

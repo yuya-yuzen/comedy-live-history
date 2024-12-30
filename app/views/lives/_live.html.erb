@@ -4,10 +4,4 @@
       <%= link_to live.display_name, live %>
     </strong>
   </p>
-
-  <ul>
-    <% live.comedians.each do |comedian| %>
-      <%= render partial: "lives/comedian", object: comedian %>
-    <% end %>
-  </ul>
 </div>

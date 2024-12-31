@@ -1,24 +1,12 @@
-# README
+# comedy-live-history
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+お笑いライブ履歴を確認できる自分用の便利ツール  
+https://yuya-yuzen.github.io/comedy-live-history/
 
-Things you may want to cover:
+## localで静的サイトに変換する方法
 
-* Ruby version
+docs配下に格納される
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+wget -r -l inf -k -nc -nH -p -E -e robots=off -P ./docs http://localhost:3000
+```
